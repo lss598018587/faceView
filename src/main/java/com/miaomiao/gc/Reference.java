@@ -23,7 +23,9 @@ public class Reference {
     }
     private static void weak(){
 //        WeakReference weak = new WeakReference(new String("weak"));
-        WeakReference weak = new WeakReference("weak");
+//        WeakReference weak = new WeakReference(new Object());
+        int m = 5;
+        WeakReference weak = new WeakReference(m);
         System.out.println("weak="+weak.get());
         System.out.println("------gc------");
         System.gc();
