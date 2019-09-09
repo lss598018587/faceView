@@ -1,5 +1,7 @@
 package com.miaomiao.tmonitor;
 
+import com.miaomiao.tmonitor.utils.FileJarSearch;
+
 import java.io.File;
 import java.lang.instrument.Instrumentation;
 import java.net.MalformedURLException;
@@ -14,12 +16,18 @@ import java.net.URL;
 public class MyAgent {
     public static void premain(String args, Instrumentation inst) {
 
+        try {
+
+
         ClassLoader parentClassLoader = Thread.currentThread().getContextClassLoader();
 
         /**
          * 创建Core加载器
          */
         ClassLoader coreClassLoader = buildCoreClassLoader();
+        }catch (Exception e){
+
+        }
 
     }
     private static ClassLoader buildCoreClassLoader() throws MalformedURLException, URISyntaxException {
@@ -33,7 +41,6 @@ public class MyAgent {
         // core相关的所有jar
         URL[] coreJars = FileJarSearch.searchJar(BootStrapContext.getInstances().getMonitorHome() + File.separator + "core");
 
-        logger(coreJars);
 
         // core的独立ClassLoader
         BundleClassLoader coreLoader = new BundleClassLoader(coreJars, parent);
