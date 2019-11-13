@@ -8,6 +8,10 @@ import java.util.concurrent.atomic.AtomicStampedReference;
  * @Auther: miaomiao
  * @Date: 2019-08-29 20:06
  * @Description:  CAS存在ABA的问题
+ * 前提 a=5
+ * 线程1，对a操作加5，再操作减5
+ * 线程2，CAS，对a加10.
+ *
  */
 public class ABA {
     private static AtomicInteger atomicInt = new AtomicInteger(100);
