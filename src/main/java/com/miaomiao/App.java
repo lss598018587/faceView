@@ -1,12 +1,15 @@
 package com.miaomiao;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * Hello world!
  *
  */
 public class App 
 {
-
+   static ExecutorService s = Executors.newCachedThreadPool();
 
     public static void main( String[] args )
     {
@@ -23,5 +26,12 @@ public class App
         m[0] = "123";
         System.out.println(m);
 
+        System.out.println(Thread.currentThread().getName());
+        s.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName());
+            }
+        });
     }
 }
