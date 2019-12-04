@@ -3,7 +3,14 @@ package com.miaomiao.jvm;
 import java.util.UUID;
 
 /**
- * 类的初始化只有一次
+ * 类的初始化的时候,以下static方法，一个类不管初始化几次，只有第一次初始化的时候才执行，后面就不执行了
+ * static{
+ *      System.out.println("123");
+ * }
+ * 一个类不管初始化几次，以下方法，每次初始化都会执行
+ *  {
+ *     System.out.println("123");
+ *  }
  *
  * 对于数组实例来说，其类型是由jvm在运行期动态生成的，表示为 [Lcom.miaomiao.jvm.MyParent4;
  * 这种形式。动态生成的类型，其父类型就是Object。
