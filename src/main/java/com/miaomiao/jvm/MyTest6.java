@@ -1,8 +1,15 @@
 package com.miaomiao.jvm;
 
 /**
- * 当一个接口在初始化时，并不要求其父接口都完成了初始化
- * 只有在真正使用到父接口的时候（入引用接口中所定义的常量时），才会初始化
+ * 1.调用 Singleton.getInstance() 进入类的准备阶段
+ * 1-1.Singleton counter1为 0
+ * 1-2.Singleton singleton =null
+ * 1-3.Singleton counter2为 0
+ *
+ * 2.进行初始化阶段
+ * 2-1. Singleton counter1 因为没有赋值，还是0
+ * 2-2  执行 singleton = new Singleton();
+ * 2-3  Singleton counter2进行0的赋值
  */
 public class MyTest6 {
     public static void main(String[] args) {
