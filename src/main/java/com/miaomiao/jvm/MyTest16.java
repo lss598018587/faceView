@@ -25,6 +25,14 @@ public class MyTest16 extends ClassLoader{
         this.classLoadName = classLoadName;
     }
 
+
+    public MyTest16(ClassLoader parent){
+        //显示指定该类加载器的父加载器
+        super(parent);
+    }
+
+
+
     @Override
     protected Class<?> findClass(String className) throws ClassNotFoundException {
         System.out.println("-----className："+className);
