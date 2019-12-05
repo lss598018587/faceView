@@ -7,7 +7,7 @@ import com.sun.crypto.provider.AESKeyGenerator;
  *  2、执行这个命令：java -Djava.ext.dirs=./ com/miaomiao/jvm/MyTest19
  *
  *  把扩展目录改成 /Users/miaomiao/myProject/faceView/target/classes
- *  导致扩展目录下面的包无法被加载，导致下面报错
+ *  导致扩展目录下面的包无法被加载（extClassLoad没有可加载的类），导致下面报错
  *
  */
 public class MyTest19 {

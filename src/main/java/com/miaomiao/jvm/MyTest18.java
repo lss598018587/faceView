@@ -16,6 +16,5 @@ public class MyTest18 {
         Class<?> clazz = load1.loadClass("com.miaomiao.jvm.MyTest1");
         System.out.println(clazz);
         System.out.println(clazz.getClassLoader());
-//        System.out.println(clazz.getClassLoader());
     }
 }
