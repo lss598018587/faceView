@@ -1,4 +1,4 @@
-package com.miaomiao.jvm;
+package com.miaomiao.classLoad.jvm;
 
 /**
  * 调用ClassLoader类的loadClass方法加载一个类，并不是对类的主动使用，不会导致类的初始化
@@ -7,13 +7,13 @@ package com.miaomiao.jvm;
 public class MyTest12 {
     public static void main(String[] args) throws ClassNotFoundException {
         ClassLoader loader = ClassLoader.getSystemClassLoader();
-        Class<?> clazz = loader.loadClass("com.miaomiao.jvm.CL");
+        Class<?> clazz = loader.loadClass("com.miaomiao.classLoad.jvm.CL");
 
         System.out.println(clazz);
 
         System.out.println("---------------");
 
-        clazz = Class.forName("com.miaomiao.jvm.CL");
+        clazz = Class.forName("com.miaomiao.classLoad.jvm.CL");
         System.out.println(clazz);
     }
 }

@@ -1,4 +1,4 @@
-package com.miaomiao.jvm;
+package com.miaomiao.classLoad.jvm;
 
 /**
  * 1.调用 Singleton.getInstance() 进入类的准备阶段

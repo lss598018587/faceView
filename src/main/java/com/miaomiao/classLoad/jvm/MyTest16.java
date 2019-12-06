@@ -1,4 +1,4 @@
-package com.miaomiao.jvm;
+package com.miaomiao.classLoad.jvm;
 
 import java.io.*;
 
@@ -74,7 +74,7 @@ public class MyTest16 extends ClassLoader{
         MyTest16 load1 = new MyTest16("loader1");
 //        load1.setPath("/Users/miaomiao/myProject/faceView/target/classes/");
         load1.setPath("/Users/miaomiao/Desktop/");
-        Class<?> clazz = load1.loadClass("com.miaomiao.jvm.MyTest1");
+        Class<?> clazz = load1.loadClass("com.miaomiao.classLoad.jvm.MyTest1");
         System.out.println("clazz:"+clazz.hashCode());
         Object object = clazz.newInstance();
         System.out.println(object);
@@ -83,7 +83,7 @@ public class MyTest16 extends ClassLoader{
 
         MyTest16 load2 = new MyTest16("loader2");
         load2.setPath("/Users/miaomiao/Desktop/");
-        Class<?> clazz2 = load2.loadClass("com.miaomiao.jvm.MyTest1");
+        Class<?> clazz2 = load2.loadClass("com.miaomiao.classLoad.jvm.MyTest1");
         System.out.println("clazz2:"+clazz2.hashCode());
         Object object2 = clazz2.newInstance();
         System.out.println(object2);
@@ -92,7 +92,7 @@ public class MyTest16 extends ClassLoader{
 
         MyTest16 load3 = new MyTest16(load2,"loader3");
         load2.setPath("/Users/miaomiao/Desktop/");
-        Class<?> clazz3 = load3.loadClass("com.miaomiao.jvm.MyTest1");
+        Class<?> clazz3 = load3.loadClass("com.miaomiao.classLoad.jvm.MyTest1");
         System.out.println("clazz3:"+clazz3.hashCode());
         Object object3 = clazz3.newInstance();
         System.out.println(object3);

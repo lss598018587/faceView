@@ -1,6 +1,4 @@
-package com.miaomiao.jvm;
-
-import java.util.UUID;
+package com.miaomiao.classLoad.jvm;
 
 /**
  * 类的初始化的时候,以下static方法，一个类不管初始化几次，只有第一次初始化的时候才执行，后面就不执行了

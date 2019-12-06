@@ -1,4 +1,4 @@
-package com.miaomiao.jvm;
+package com.miaomiao.classLoad.jvm;
 
 /**
  * 1、a的准备阶段为0

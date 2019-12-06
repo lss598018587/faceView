@@ -1,4 +1,4 @@
-package com.miaomiao.jvm;
+package com.miaomiao.classLoad.jvm;
 
 /**
  * 把类放到 bootstrap类加载器的地方，根目录加载器会进行加载
@@ -13,7 +13,7 @@ public class MyTest18 {
         System.out.println(System.getProperty("java.class.path"));
 
         MyTest16 load1 = new MyTest16("loaad1");
-        Class<?> clazz = load1.loadClass("com.miaomiao.jvm.MyTest1");
+        Class<?> clazz = load1.loadClass("com.miaomiao.classLoad.jvm.MyTest1");
         System.out.println(clazz);
         System.out.println(clazz.getClassLoader());
     }

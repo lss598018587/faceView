@@ -1,4 +1,4 @@
-package com.miaomiao.jvm;
+package com.miaomiao.classLoad.jvm;
 
 
 import java.lang.reflect.Method;
@@ -16,8 +16,8 @@ public class MyTest20 {
         load1.setPath("/Users/miaomiao/Desktop/");
         load2.setPath("/Users/miaomiao/Desktop/");
 
-        Class<?> clazz1 = load1.loadClass("com.miaomiao.jvm.MyPerson");
-        Class<?> clazz2 = load2.loadClass("com.miaomiao.jvm.MyPerson");
+        Class<?> clazz1 = load1.loadClass("com.miaomiao.classLoad.jvm.MyPerson");
+        Class<?> clazz2 = load2.loadClass("com.miaomiao.classLoad.jvm.MyPerson");
 
         System.out.println(clazz1==clazz2);
 

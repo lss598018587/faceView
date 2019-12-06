@@ -1,4 +1,4 @@
-package com.miaomiao.jvm;
+package com.miaomiao.classLoad.jvm;
 
 /**
  * 1.把target 里的Dog删了，用自定义加载器去加载Dog
@@ -13,7 +13,7 @@ public class MyTest0 {
     public static void main(String[] args) throws Exception {
         MyTest load1 = new MyTest("load1");
         load1.setPath("/Users/wangmiao/Desktop/");
-        Class<?> clazz = load1.loadClass("com.miaomiao.jvm.Dog");
+        Class<?> clazz = load1.loadClass("com.miaomiao.classLoad.jvm.Dog");
         clazz.newInstance();
     }
 }
