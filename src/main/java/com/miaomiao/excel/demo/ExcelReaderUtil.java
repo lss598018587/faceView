@@ -17,6 +17,7 @@ public class ExcelReaderUtil {
             ExcelXlsReader exceXls = new ExcelXlsReader();
             exceXls.setRowReader(reader);
             exceXls.process(fileName);
+            System.out.println("qqwqeqwe");
             // 处理excel2007文件
         }   else {
             throw new Exception("文件格式错误，fileName的扩展名只能是xls或xlsx。");
@@ -30,6 +31,6 @@ public class ExcelReaderUtil {
      */
     public static void main(String[] args) throws Exception {
         IExcelRowReader rowReader = new ExcelRowReader();
-        ExcelReaderUtil.readExcel(rowReader, "/Users/wangmiao/Desktop/skus.xls");
+        ExcelReaderUtil.readExcel(rowReader, "/Users/miaomiao/Desktop/skus.xls");
     }
 }
