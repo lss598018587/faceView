@@ -1,5 +1,7 @@
 package com.miaomiao.suanfa.linkedList;
 
+import java.util.Stack;
+
 public class SingleLinkedListDemo {
 
     public static void main(String[] args) {
@@ -15,9 +17,13 @@ public class SingleLinkedListDemo {
         singleLinkedList.list();
 
         //测试一下单链表的反转功能
-        System.out.println("测试一下单链表的反转功能~~~");
-        singleLinkedList.reversetList(singleLinkedList.getHead());
-        singleLinkedList.list();
+//        System.out.println("测试一下单链表的反转功能~~~");
+//        singleLinkedList.reversetList(singleLinkedList.getHead());
+//        singleLinkedList.list();
+
+        //链表逆序打印
+        System.out.println("测试一下链表逆序打印~~~");
+        singleLinkedList.reversePrint(singleLinkedList.getHead());
     }
 
 
@@ -99,6 +105,28 @@ class SingleLinkedList{
         head.next = reverseHead.next;
     }
 
+
+    //逆序打印
+    public   void reversePrint(HerNode head){
+        if(head.next==null){
+            //空链表，不能打印
+            return;
+        }
+
+        //创建要给一个栈，将各个节点压入栈
+        Stack<HerNode> stack = new Stack<>();
+        HerNode cur = head.next;
+        while (cur !=null){
+            stack.push(cur);
+            cur = cur.next;
+        }
+        //将栈中的节点进行打印，pop出栈
+        while (stack.size()>0){
+            //stack 的特点是先进后出
+            System.out.println(stack.pop());
+        }
+
+    }
 
 }
 
